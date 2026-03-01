@@ -1,10 +1,10 @@
 bl_info = {
-    "name": "Auto Light Renamer",
+    "name": "Share/Lock Auto Light Renamer",
     "author": "Matthieu MattRM Barbié and Sonnet 4.5",
     "version": (1, 0, 0),
     "blender": (5, 0, 0),
     "location": "Automatic",
-    "description": "Automatically renames lights with _LGT suffix when created",
+    "description": "Automatically renames lights with _LGT suffix when created for Share/Lock pipeline",
     "category": "Lighting",
 }
 
@@ -57,7 +57,7 @@ def register():
     if cleanup_processed_lights not in bpy.app.handlers.load_post:
         bpy.app.handlers.load_post.append(cleanup_processed_lights)
     
-    print("Auto Light Renamer addon: Enabled")
+    print("Share/Lock Auto Light Renamer addon: Enabled")
 
 def unregister():
     """Unregister the addon"""
@@ -71,7 +71,7 @@ def unregister():
     # Clear the set
     processed_lights.clear()
     
-    print("Auto Light Renamer addon: Disabled")
+    print("Share/Lock Auto Light Renamer addon: Disabled")
 
 if __name__ == "__main__":
     register()
